@@ -15,7 +15,7 @@ public class Empleado {
         this.juntaAccionComunalPertence = juntaAccionComunalPertence;
         this.rolJuntaAccionComunal = rolJuntaAccionComunal;
     }
-
+    //Getters and Setters de la clase Empleado
     public String getNombreEmpleado() {
         return nombreEmpleado;
     }
@@ -48,6 +48,6 @@ public class Empleado {
         this.rolJuntaAccionComunal = rolJuntaAccionComunal;
     }
 
-    //Getters and Setters de la clase Empleado
+
 
 }
