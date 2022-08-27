@@ -8,14 +8,15 @@ public class Jac {
     private String telefonoJac;
     private String nitJac;
 
-    //Constructor de la clase Jac
+   // constructor
     public Jac(String nombreJac, String direccionJac, String telefonoJac, String nitJac) {
         this.nombreJac = nombreJac;
         this.direccionJac = direccionJac;
         this.telefonoJac = telefonoJac;
         this.nitJac = nitJac;
+
     }
-    //Getters and Setters de los atributos
+
     public String getNombreJac() {
         return nombreJac;
     }
@@ -23,6 +24,7 @@ public class Jac {
     public void setNombreJac(String nombreJac) {
         this.nombreJac = nombreJac;
     }
+
 
     public String getDireccionJac() {
         return direccionJac;
@@ -47,4 +49,12 @@ public class Jac {
     public void setNitJac(String nitJac) {
         this.nitJac = nitJac;
     }
+
+
+    @Override
+    public String toString() {
+        return "Jac{" + "direccionJac=" + direccionJac + ", telefonoJac=" + telefonoJac + ", nitJac=" + nitJac + '}';
+    }
 }
+
+

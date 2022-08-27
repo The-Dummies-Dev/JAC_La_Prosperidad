@@ -5,17 +5,15 @@ public class MovimientoDinero {
     //Atributos de la clase MovimientoDinero
     private float montoMovimiento;
     private String conceptoMovimiento;
-    private Empleado usuario;
+    private Empleado usuarioRegistraMovimiento;
 
     //Constructor
-    public MovimientoDinero(float montoMovimiento, String conceptoMovimiento, Empleado usuario) {
-        this.montoMovimiento = montoMovimiento;
-        this.conceptoMovimiento = conceptoMovimiento;
-        this.usuario = usuario;
 
+    public MovimientoDinero(float montoMovimiento, String conceptoMovimiento, Empleado usuarioRegistraMovimiento) {
+        this.setMontoMovimiento(montoMovimiento);
+        this.setConceptoMovimiento(conceptoMovimiento);
+        this.setUsuarioRegistraMovimiento(usuarioRegistraMovimiento);
     }
-
-    //Setters and Getters de los atributos de la clase MovientoDinero
 
     public float getMontoMovimiento() {
         return montoMovimiento;
@@ -33,7 +31,16 @@ public class MovimientoDinero {
         this.conceptoMovimiento = conceptoMovimiento;
     }
 
-    public Empleado getUsuario() {
-        return this.usuario;
+    public Empleado getUsuarioRegistraMovimiento() {
+        return usuarioRegistraMovimiento;
+    }
+
+    public void setUsuarioRegistraMovimiento(Empleado usuarioRegistraMovimiento) {
+        this.usuarioRegistraMovimiento = usuarioRegistraMovimiento;
+    }
+
+    @Override
+    public String toString() {
+        return "MovimientoDinero{" + "montoMovimiento=" + getMontoMovimiento() + ", conceptoMovimiento=" + getConceptoMovimiento() + ", UsuarioRegistraMovimiento=" + usuarioRegistraMovimiento + '}';
     }
 }

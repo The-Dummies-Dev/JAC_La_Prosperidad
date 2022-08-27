@@ -1,53 +1,56 @@
 package com.TheDummiesDev;
 
 //Clase Empleado
-public class Empleado {
-    //Atributos de la clase Empleado
-    private String nombreEmpleado;
+    public class Empleado {
+    private String NombreEmpleado;
     private String emailEmpleado;
-    private String juntaAccionComunalPertence;
-    private String rolJuntaAccionComunal;
-
-    //Constructor de la clase
-    public Empleado(String nombreEmpleado, String emailEmpleado, String juntaAccionComunalPertence, String rolJuntaAccionComunal) {
-        this.nombreEmpleado = nombreEmpleado;
+    private Jac juntaAccionComunalPertenece;
+    private String RolJuntaAccionComuna;
+    public Empleado(String NombreEmpleado, String emailEmpleado, Jac juntaAccionComunalPertenece, String RolJuntaAccionComuna) {
+        this.NombreEmpleado = NombreEmpleado;
         this.emailEmpleado = emailEmpleado;
-        this.juntaAccionComunalPertence = juntaAccionComunalPertence;
-        this.rolJuntaAccionComunal = rolJuntaAccionComunal;
+        this.juntaAccionComunalPertenece = juntaAccionComunalPertenece;
+        this.RolJuntaAccionComuna = RolJuntaAccionComuna;
     }
-    //Getters and Setters de la clase Empleado
+
     public String getNombreEmpleado() {
-        return nombreEmpleado;
+        return NombreEmpleado;
     }
 
-    public void setNombreEmpleado(String nombreEmpleado) {
-        this.nombreEmpleado = nombreEmpleado;
+    public void setNombreEmpleado(String NombreEmpleado) {
+        this.NombreEmpleado = NombreEmpleado;
     }
 
-    public String getEmailEmpleado() {
-        return emailEmpleado;
+    public Jac getJuntaAccionComunalPertenece() {
+        return this.juntaAccionComunalPertenece;
     }
 
-    public void setEmailEmpleado(String emailEmpleado) {
-        this.emailEmpleado = emailEmpleado;
-    }
-
-    public String getJuntaAccionComunalPertence() {
-        return juntaAccionComunalPertence;
-    }
-
-    public void setJuntaAccionComunalPertence(String juntaAccionComunalPertence) {
-        this.juntaAccionComunalPertence = juntaAccionComunalPertence;
+    public void setjuntaAccionComunalPertenece(Jac juntaAccionComunalPertenece) {
+        this.juntaAccionComunalPertenece = juntaAccionComunalPertenece;
     }
 
     public String getRolJuntaAccionComunal() {
-        return rolJuntaAccionComunal;
+        return RolJuntaAccionComuna;
     }
 
-    public void setRolJuntaAccionComunal(String rolJuntaAccionComunal) {
-        this.rolJuntaAccionComunal = rolJuntaAccionComunal;
+    public void SetRolJuntaAccionComuna(String RolJuntaAccionComuna) {
+        this.RolJuntaAccionComuna = RolJuntaAccionComuna;
     }
 
+    public String getemailEmpleado() {
+        return emailEmpleado;
+    }
 
+    public void setemailEmpleado(String emailEmpleado) {
+        this.emailEmpleado = emailEmpleado;
+    }
 
+    @Override
+    public String toString() {
+        return "Empleado{" +
+                "NombreEmpleado='" + NombreEmpleado + '\'' +
+                ", emailEmpleado='" + emailEmpleado + '\'' +
+                ", RolJuntaAccionComuna='" + RolJuntaAccionComuna + '\'' +
+                '}';
+    }
 }
