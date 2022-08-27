@@ -37,11 +37,21 @@ public class JacApplication {
 	// Organizar informacion en Arrays para poder acceder facilmente a la información
 	public static void main(String[] args){
 		ArrayList<Empleado> empleados = new ArrayList();
+<<<<<<< HEAD
 		empleados.add(new Empleado("Marcos Bautista", "macondo777@hotmail.com","La prosperidad","Administrador"));
 		empleados.add(new Empleado("Juan Bolanos","juankz040895@gmail.com","La prosperidad","Product Owner"));
 		ArrayList<MovimientoDinero> movimientoDineros = new ArrayList<>();
 		movimientoDineros.add(new MovimientoDinero(20000,"donativo","Marcos Bautista"));
 		movimientoDineros.add(new MovimientoDinero(15000,"donativo","Juan Bolanos"));
+=======
+		empleados.add(new Empleado("Marcos Bautista", "macondo777@hotmail.com","La prosperidad","Administrador",3155));
+		empleados.add(new Empleado("Juan Bolanos","juankz040895@gmail.com","La prosperidad","Product Owner",6681));
+                empleados.add(new Empleado ("Raymond Moreno", "Stivensmorenomora1990@gmail.com","La prosperidad","Desarrollador",7452));
+		ArrayList<MovimientoDinero> movimientoDineros = new ArrayList<>();
+		movimientoDineros.add(new MovimientoDinero(20000,"donativo","Marcos Bautista"));
+		movimientoDineros.add(new MovimientoDinero(15000,"donativo","Juan Bolanos"));
+                movimientoDineros.add(new MovimientoDinero(25000,"donativo","Raymond Moreno"));
+>>>>>>> 7b91969 (Commit del desarrollador)
 		System.out.println(Arrays.toString(JacApplication.informacionEmpleados(empleados)));
 		System.out.println(Arrays.toString(JacApplication.informacionMonetaria(movimientoDineros)));
 
@@ -66,6 +76,7 @@ public class JacApplication {
 			Object[] balances = {"Dinero Total = " + dineroTotal};
 			return balances;
 	}
+<<<<<<< HEAD
 
 
 
@@ -73,6 +84,8 @@ public class JacApplication {
 
 
 
+=======
+>>>>>>> 7b91969 (Commit del desarrollador)
 }
 
 
