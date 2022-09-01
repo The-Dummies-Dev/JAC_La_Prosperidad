@@ -13,8 +13,8 @@ public class JacApplication {
 
 	// He comentado las pruebas de los atributos anteriores en lugar de eliminarlas en caso de necesitar esta información en el futuro
 	public static void main(String[] args) {
-
 		//SpringApplication.run(JacApplication.class, args);
+
 	Jac Jac1 = new Jac ("La Prosperidad","cl 3 # 3-27","727 6420","1134-5");
 	System.out.println(Jac1.getNombreJac());
 	System.out.println(Jac1.getDireccionJac());
