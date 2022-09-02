@@ -1,4 +1,6 @@
-package com.TheDummiesDev;
+package com.TheDummiesDev.entities;
+
+import com.TheDummiesDev.entities.Empleado;
 
 //Clase movimento de dinero de la Jac
 public class MovimientoDinero {

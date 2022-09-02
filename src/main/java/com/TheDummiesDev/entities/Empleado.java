@@ -1,4 +1,4 @@
-package com.TheDummiesDev;
+package com.TheDummiesDev.entities;
 
 //Clase Empleado
     public class Empleado {

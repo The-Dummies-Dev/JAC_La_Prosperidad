@@ -3,24 +3,18 @@ package com.TheDummiesDev;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+//import java.util.ArrayList;
+//import java.util.Arrays;
 
-//@SpringBootApplication
+@SpringBootApplication
 
 //Clase principal (main) de nuestro proyecto
 public class JacApplication {
 
-	// He comentado las pruebas de los atributos anteriores en lugar de eliminarlas en caso de necesitar esta información en el futuro
-	public static void main(String[] args) {
-		//SpringApplication.run(JacApplication.class, args);
 
-	Jac Jac1 = new Jac ("La Prosperidad","cl 3 # 3-27","727 6420","1134-5");
-	System.out.println(Jac1.getNombreJac());
-	System.out.println(Jac1.getDireccionJac());
-	System.out.println(Jac1.getTelefonoJac());
-	System.out.println(Jac1.getNitJac());
-	System.out.println("-------------");
+	public static void main(String[] args) {
+		SpringApplication.run(JacApplication.class, args);
+/* Se comenta este codigo porque se se necesita en esta parte de la aplicacion!.
 	Empleado empleado1 = new Empleado("Marcos Bautista","macondo777@hotmail.com",Jac1,"Administrador");
 	Empleado empleado2 = new Empleado("Juan Bolanos","juankz040895@gmail.com",Jac1,"Product Owner");
     Empleado empleado3 = new Empleado("Raymond Moreno", "Stivensmorenomora1990@gmail.com",Jac1,"Desarrollador");
@@ -29,7 +23,7 @@ public class JacApplication {
 		MovimientoDinero ingreso3 = new MovimientoDinero(25000,"bazar",empleado3);
 		MovimientoDinero egreso1 = new MovimientoDinero(-10000,"pago",empleado1);
 
-		/*  provando las clases creadas  (descomentar para provar).
+		 provando las clases creadas  (descomentar para provar).
 		System.out.println(empleado1.getNombreEmpleado());
 		System.out.println(empleado1.getRolJuntaAccionComunal());
 		System.out.println("------------");
@@ -37,9 +31,9 @@ public class JacApplication {
 		System.out.println(ingreso1.getMontoMovimiento());
 		System.out.println(ingreso1.getConceptoMovimiento());
 		System.out.println(ingreso1.getUsuario().getNombreEmpleado());
-		System.out.println(ingreso1.getUsuario().getRolJuntaAccionComunal());*/
+		System.out.println(ingreso1.getUsuario().getRolJuntaAccionComunal());
 
-	// Organizar informacion en Arrays para poder acceder facilmente a la información
+	 Organizar informacion en Arrays para poder acceder facilmente a la información
 
 		ArrayList<Empleado> empleados = new ArrayList();
 		empleados.add(empleado1);
@@ -73,7 +67,7 @@ public class JacApplication {
 		}
 		Object[] balances = {"Dinero Total = " + dineroTotal};
 		return balances;
+ */
 	}
-
 
 }

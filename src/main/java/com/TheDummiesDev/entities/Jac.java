@@ -1,4 +1,4 @@
-package com.TheDummiesDev;
+package com.TheDummiesDev.entities;
 
 // Clase de la junta de acción comunal (Jac).
 public class Jac {
