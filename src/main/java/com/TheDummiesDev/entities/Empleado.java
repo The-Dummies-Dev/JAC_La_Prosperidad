@@ -1,12 +1,13 @@
 package com.TheDummiesDev.entities;
 
+
 //Clase Empleado
     public class Empleado {
     private String NombreEmpleado;
     private String emailEmpleado;
-    private Jac juntaAccionComunalPertenece;
+    private String juntaAccionComunalPertenece;
     private String RolJuntaAccionComuna;
-    public Empleado(String NombreEmpleado, String emailEmpleado, Jac juntaAccionComunalPertenece, String RolJuntaAccionComuna) {
+    public Empleado(String NombreEmpleado, String emailEmpleado, String juntaAccionComunalPertenece, String RolJuntaAccionComuna) {
         this.NombreEmpleado = NombreEmpleado;
         this.emailEmpleado = emailEmpleado;
         this.juntaAccionComunalPertenece = juntaAccionComunalPertenece;
@@ -21,11 +22,11 @@ package com.TheDummiesDev.entities;
         this.NombreEmpleado = NombreEmpleado;
     }
 
-    public Jac getJuntaAccionComunalPertenece() {
+    public String getJuntaAccionComunalPertenece() {
         return this.juntaAccionComunalPertenece;
     }
 
-    public void setjuntaAccionComunalPertenece(Jac juntaAccionComunalPertenece) {
+    public void setjuntaAccionComunalPertenece(String juntaAccionComunalPertenece) {
         this.juntaAccionComunalPertenece = juntaAccionComunalPertenece;
     }
 
@@ -50,6 +51,7 @@ package com.TheDummiesDev.entities;
         return "Empleado{" +
                 "NombreEmpleado='" + NombreEmpleado + '\'' +
                 ", emailEmpleado='" + emailEmpleado + '\'' +
+                ", Junta de accion comunal Empleado='" + juntaAccionComunalPertenece + '\'' +
                 ", RolJuntaAccionComuna='" + RolJuntaAccionComuna + '\'' +
                 '}';
     }
