@@ -11,13 +11,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //Clase principal (main) de nuestro proyecto
 public class JacApplication {
 
-
 	public static void main(String[] args) {
 		SpringApplication.run(JacApplication.class, args);
-/* Se comenta este codigo porque se se necesita en esta parte de la aplicacion!.
-	Empleado empleado1 = new Empleado("Marcos Bautista","macondo777@hotmail.com",Jac1,"Administrador");
-	Empleado empleado2 = new Empleado("Juan Bolanos","juankz040895@gmail.com",Jac1,"Product Owner");
-    Empleado empleado3 = new Empleado("Raymond Moreno", "Stivensmorenomora1990@gmail.com",Jac1,"Desarrollador");
+/* Se comenta este código porque se se necesita en esta parte de la aplicacion!.
 		MovimientoDinero ingreso1 = new MovimientoDinero(20000,"donativo",empleado1);
 		MovimientoDinero ingreso2 = new MovimientoDinero(15000,"rifa",empleado2);
 		MovimientoDinero ingreso3 = new MovimientoDinero(25000,"bazar",empleado3);

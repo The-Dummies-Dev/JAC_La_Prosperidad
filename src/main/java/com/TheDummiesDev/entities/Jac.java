@@ -1,14 +1,28 @@
 package com.TheDummiesDev.entities;
 
+import javax.persistence.*;
+
 // Clase de la junta de acción comunal (Jac).
+@Entity
+@Table(name="JuntasAccionComunal")
 public class Jac {
     //Atributos de la clase Jac
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    @Column(name = "nombreJac")
     private String nombreJac;
+    @Column(name = "direccionJac")
     private String direccionJac;
+    @Column(name = "telefonoJac")
     private String telefonoJac;
+    @Column(name = "nitJac")
     private String nitJac;
 
    // constructor
+    public Jac() {
+
+    }
     public Jac(String nombreJac, String direccionJac, String telefonoJac, String nitJac) {
         this.nombreJac = nombreJac;
         this.direccionJac = direccionJac;

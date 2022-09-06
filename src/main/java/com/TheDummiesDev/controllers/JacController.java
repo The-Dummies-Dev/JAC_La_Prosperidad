@@ -11,19 +11,16 @@ import java.util.List;
 //controlador de la entidad junta de acción comunal (Jac)
 @RestController
 public class JacController {
-    JacService servicio;
-    public JacController(){
+    JacService service;
+    public JacController(JacService service){
 
-        this.servicio = new JacService();
+        this.service= service;
     }
 
     @GetMapping("/listaJac")
     public List<Jac> listaJac() {
-        return this.servicio.getListaJac();
+
+        return this.service.getListaJac();
     }
 
-    @GetMapping("/Jac1")
-    public Jac Jac1(){
-        return this.servicio.getJac1();
-    }
 }
