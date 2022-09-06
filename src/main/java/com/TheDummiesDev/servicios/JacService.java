@@ -4,7 +4,6 @@ import com.TheDummiesDev.entities.Jac;
 import com.TheDummiesDev.repositorios.JacRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 //Clase del servicio junta de acción comunal
@@ -22,6 +21,11 @@ public class JacService {
     public List<Jac> getListaJac() {
 
         return this.repository.findAll();
+    }
+
+    //metodo post para agregar una nueva Jac a la tabla junta de accion comunal
+    public Jac createJac(Jac newJac) {
+        return this.repository.save(newJac);
     }
 }
 
