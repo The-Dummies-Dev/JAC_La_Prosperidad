@@ -25,8 +25,19 @@ public class JacService {
 
     //metodo post para agregar una nueva Jac a la tabla junta de accion comunal
     public Jac createJac(Jac newJac) {
+
         return this.repository.save(newJac);
     }
+    // metodo Getter para obtener una Jac especifica por su id
+    public Jac getJac(long id){
+        return repository.findById(id).get();
+    }
+
+    //metodo para borrar registro por su id
+    public void borrarJac(long id){
+        this.repository.deleteById(id);
+    }
+
 }
 
 
