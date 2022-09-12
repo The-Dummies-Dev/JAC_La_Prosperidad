@@ -1,12 +1,31 @@
-package com.TheDummiesDev;
+package com.TheDummiesDev.entities;
+
+
+import javax.persistence.*;
 
 //Clase Empleado
-    public class Empleado {
+    @Entity
+    @Table(name = "empleado")
+public class Empleado {
+    @Id
+    private long idCedula;
+    @Column(name = "NombreEmpleado")
     private String NombreEmpleado;
+    @Column(name = "emailEmpleado")
     private String emailEmpleado;
-    private Jac juntaAccionComunalPertenece;
+
+    @ManyToOne(optional = true)
+    @JoinColumn(name = "nitJac")
+    private  Jac juntaAccionComunalPertenece;
+    @Column(name = "RolJuntaAccionComuna")
     private String RolJuntaAccionComuna;
-    public Empleado(String NombreEmpleado, String emailEmpleado, Jac juntaAccionComunalPertenece, String RolJuntaAccionComuna) {
+
+    public Empleado(){
+
+    }
+
+    public Empleado(long idCedula, String NombreEmpleado, String emailEmpleado, Jac juntaAccionComunalPertenece, String RolJuntaAccionComuna) {
+        this.idCedula = idCedula;
         this.NombreEmpleado = NombreEmpleado;
         this.emailEmpleado = emailEmpleado;
         this.juntaAccionComunalPertenece = juntaAccionComunalPertenece;
@@ -45,12 +64,12 @@ package com.TheDummiesDev;
         this.emailEmpleado = emailEmpleado;
     }
 
-    @Override
-    public String toString() {
-        return "Empleado{" +
-                "NombreEmpleado='" + NombreEmpleado + '\'' +
-                ", emailEmpleado='" + emailEmpleado + '\'' +
-                ", RolJuntaAccionComuna='" + RolJuntaAccionComuna + '\'' +
-                '}';
+
+    public long getIdCedula() {
+        return idCedula;
+    }
+
+    public void setIdCedula(long idCedula) {
+        this.idCedula = idCedula;
     }
 }
