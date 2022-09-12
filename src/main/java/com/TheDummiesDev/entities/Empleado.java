@@ -8,18 +8,24 @@ import javax.persistence.*;
     @Table(name = "empleado")
 public class Empleado {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long idCedula;
     @Column(name = "NombreEmpleado")
     private String NombreEmpleado;
     @Column(name = "emailEmpleado")
     private String emailEmpleado;
-    @Column(name = "juntaAccionComunalPertenece")
-    private String juntaAccionComunalPertenece;
+
+    @ManyToOne(optional = true)
+    @JoinColumn(name = "nitJac")
+    private  Jac juntaAccionComunalPertenece;
     @Column(name = "RolJuntaAccionComuna")
     private String RolJuntaAccionComuna;
 
-    public Empleado(String NombreEmpleado, String emailEmpleado, String juntaAccionComunalPertenece, String RolJuntaAccionComuna) {
+    public Empleado(){
+
+    }
+
+    public Empleado(long idCedula, String NombreEmpleado, String emailEmpleado, Jac juntaAccionComunalPertenece, String RolJuntaAccionComuna) {
+        this.idCedula = idCedula;
         this.NombreEmpleado = NombreEmpleado;
         this.emailEmpleado = emailEmpleado;
         this.juntaAccionComunalPertenece = juntaAccionComunalPertenece;
@@ -34,11 +40,11 @@ public class Empleado {
         this.NombreEmpleado = NombreEmpleado;
     }
 
-    public String getJuntaAccionComunalPertenece() {
+    public Jac getJuntaAccionComunalPertenece() {
         return this.juntaAccionComunalPertenece;
     }
 
-    public void setjuntaAccionComunalPertenece(String juntaAccionComunalPertenece) {
+    public void setjuntaAccionComunalPertenece(Jac juntaAccionComunalPertenece) {
         this.juntaAccionComunalPertenece = juntaAccionComunalPertenece;
     }
 
@@ -58,13 +64,12 @@ public class Empleado {
         this.emailEmpleado = emailEmpleado;
     }
 
-    @Override
-    public String toString() {
-        return "Empleado{" +
-                "NombreEmpleado='" + NombreEmpleado + '\'' +
-                ", emailEmpleado='" + emailEmpleado + '\'' +
-                ", Junta de accion comunal Empleado='" + juntaAccionComunalPertenece + '\'' +
-                ", RolJuntaAccionComuna='" + RolJuntaAccionComuna + '\'' +
-                '}';
+
+    public long getIdCedula() {
+        return idCedula;
+    }
+
+    public void setIdCedula(long idCedula) {
+        this.idCedula = idCedula;
     }
 }

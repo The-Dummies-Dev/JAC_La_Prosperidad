@@ -30,13 +30,16 @@ public class JacService {
     }
     // metodo Getter para obtener una Jac especifica por su id
     public Jac getJac(long id){
-        return repository.findById(id).get();
+        return repository.findById(id).orElseThrow();
     }
 
     //metodo para borrar registro por su id
     public void borrarJac(long id){
         this.repository.deleteById(id);
     }
+
+
+
 
 }
 

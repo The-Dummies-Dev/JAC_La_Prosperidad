@@ -7,23 +7,21 @@ import javax.persistence.*;
 @Table(name="JuntasAccionComunal")
 public class Jac {
     //Atributos de la clase Jac
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+
     @Column(name = "nombreJac")
     private String nombreJac;
     @Column(name = "direccionJac")
     private String direccionJac;
     @Column(name = "telefonoJac")
     private String telefonoJac;
-    @Column(name = "nitJac")
-    private String nitJac;
+    @Id
+    private Long nitJac;
 
    // constructor
     public Jac() {
 
     }
-    public Jac(String nombreJac, String direccionJac, String telefonoJac, String nitJac) {
+    public Jac(String nombreJac, String direccionJac, String telefonoJac, Long nitJac) {
         this.nombreJac = nombreJac;
         this.direccionJac = direccionJac;
         this.telefonoJac = telefonoJac;
@@ -56,19 +54,15 @@ public class Jac {
         this.telefonoJac = telefonoJac;
     }
 
-    public String getNitJac() {
+    public Long getNitJac() {
         return nitJac;
     }
 
-    public void setNitJac(String nitJac) {
+    public void setNitJac(Long nitJac) {
         this.nitJac = nitJac;
     }
 
 
-    @Override
-    public String toString() {
-        return "Jac{" + "direccionJac=" + direccionJac + ", telefonoJac=" + telefonoJac + ", nitJac=" + nitJac + '}';
-    }
 }
 
 
