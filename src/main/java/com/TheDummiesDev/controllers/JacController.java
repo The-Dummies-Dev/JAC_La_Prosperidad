@@ -2,6 +2,7 @@ package com.TheDummiesDev.controllers;
 
 import com.TheDummiesDev.entities.Jac;
 import com.TheDummiesDev.servicios.JacService;
+import com.sun.istack.NotNull;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -32,6 +33,11 @@ public class JacController {
     @DeleteMapping("/listaJac/{id}")
     public void deleteJac(@PathVariable("id")long id){
        this.service.borrarJac(id);
+    }
+
+    @PutMapping("/listaJac/{id}")
+    public Jac update(@PathVariable("id")long id, @RequestBody Jac actulizarJac){
+        return this.service.actualizarJac(id,actulizarJac);
     }
 
 

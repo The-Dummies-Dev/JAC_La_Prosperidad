@@ -30,6 +30,7 @@ public class JacService {
     }
     // metodo Getter para obtener una Jac especifica por su id
     public Jac getJac(long id){
+
         return repository.findById(id).orElseThrow();
     }
 
@@ -38,8 +39,14 @@ public class JacService {
         this.repository.deleteById(id);
     }
 
+    public Jac actualizarJac(Long id, Jac j){
+        Jac jacActual = repository.findById(id).orElseThrow();
+        jacActual.setNombreJac(j.getNombreJac());
+        jacActual.setDireccionJac(j.getDireccionJac());
+        jacActual.setTelefonoJac(j.getTelefonoJac());
+       return  this.repository.save(jacActual);
 
-
+    }
 
 }
 
