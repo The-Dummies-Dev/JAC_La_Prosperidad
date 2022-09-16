@@ -10,7 +10,7 @@
   display: block;
   padding: 12px 42px;
   border-radius: 12px;
-  font-size: 1.25rem;
+  font-size: 1.20rem;
   background: rgb(23, 74, 243);
   color: white;
   transform: translateY(-6px);
@@ -31,7 +31,7 @@
   display: block;
   padding: 12px 42px;
   border-radius: 12px;
-  font-size: 1.25rem;
+  font-size: 1.20rem;
   background: rgb(123, 124, 126);
   color: white;
   transform: translateY(-6px);
@@ -40,3 +40,5 @@
 .pushable-secondary:active .front-secondary {
   transform: translateY(-2px);
 }
+
+
