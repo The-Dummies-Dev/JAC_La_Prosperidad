@@ -40,10 +40,16 @@ public class JacController {
        this.service.borrarJac(id);
     }
 
-    @PutMapping("/listaJac/{id}")
+   /* @PutMapping("/listaJac/{id}")
     public Jac update(@PathVariable("id")long id, @RequestBody Jac actulizarJac){
         return this.service.actualizarJac(id,actulizarJac);
     }
 
+    */
+    @PutMapping("/listaJac/{id}")
+       public RedirectView actualizarJac(@PathVariable Long id, Jac actJac) {
+        this.service.actualizarJac(id, actJac);
+        return  new RedirectView("/Jacs");
 
+    }
 }

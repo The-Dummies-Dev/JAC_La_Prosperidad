@@ -5,6 +5,7 @@ import com.TheDummiesDev.servicios.JacService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -33,5 +34,11 @@ public class frontControllers {
     public String nuevaJac(Model model){
         model.addAttribute("nuevaJac", new Jac());
         return "nueva-jac";
+    }
+    @GetMapping("/Jacs/{id}")
+    public String actualizarPaciente(@PathVariable Long id, Model model){
+        Jac jacFind = this.service.getJac(id);
+        model.addAttribute("jacFind", jacFind);
+        return "actualizar-jac";
     }
 }

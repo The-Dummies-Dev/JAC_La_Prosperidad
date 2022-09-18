@@ -14,13 +14,13 @@
     <div class="px-4 py-3 my-2 text-center">
         <h1 class="display-5 fw-bold mb-5">Nueva Junta</h1>
         <div class="col-lg-5 mx-auto">
-        <form th:action="@{/listaJac}" th:method="post" th:object="${nuevaJac}" class="d-flex flex-column gap-3 aling-items-center">
+        <form th:action="@{/listaJac}" th:method="post" th:object="${nuevaJac}" class="d-flex flex-column gap-3 align-items-center">
             <input th:field="*{nombreJac}" class="form-control bg-dark text-white" type="text" placeholder="Nombre de la junta"/>
             <input th:field="*{direccionJac}" class="form-control bg-dark text-white" type="text" placeholder="Dirección de la junta"/>
             <input th:field="*{telefonoJac}" class="form-control bg-dark text-white" type="text" placeholder="Telefono de la junta"/>
             <input th:field="*{nitJac}" class="form-control bg-dark text-white" type="number" placeholder="Nit de la junta"/>
-            <button type="submit" class="btn btn-primary gap-3" >Crear Junta</button>
-            <a href="/Jacs" class="btn btn-outline-secondary gap-3" >Cancelar</a>
+            <button type="submit" class="btn btn-primary gap-5" >Crear Junta</button>
+            <a href="/Jacs" class="btn btn-outline-secondary gap-5" >Cancelar</a>
         </form>
         </div>
     </div>
