@@ -1,5 +1,4 @@
 package com.TheDummiesDev.controllers;
-
 import com.TheDummiesDev.entities.Jac;
 import com.TheDummiesDev.servicios.JacService;
 import org.springframework.stereotype.Controller;
@@ -13,7 +12,9 @@ import java.util.List;
 public class frontControllers {
 
     JacService service;
-    public frontControllers(JacService service){
+
+    //constructor para el front de Jac
+    public frontControllers(JacService service ){
 
         this.service= service;
     }
@@ -36,9 +37,10 @@ public class frontControllers {
         return "nueva-jac";
     }
     @GetMapping("/Jacs/{id}")
-    public String actualizarPaciente(@PathVariable Long id, Model model){
+    public String actualizarJac(@PathVariable("id") Long id, Model model){
         Jac jacFind = this.service.getJac(id);
         model.addAttribute("jacFind", jacFind);
         return "actualizar-jac";
     }
+
 }

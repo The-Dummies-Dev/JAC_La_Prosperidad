@@ -2,10 +2,10 @@ package com.TheDummiesDev.controllers;
 
 import com.TheDummiesDev.entities.Jac;
 import com.TheDummiesDev.servicios.JacService;
-import com.sun.istack.NotNull;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
+
 
 import java.util.List;
 
@@ -35,9 +35,16 @@ public class JacController {
         return this.service.getJac(id);
     }
 
-    @DeleteMapping("/listaJac/{id}")
+   /* @DeleteMapping("/listaJac/{id}")
     public void deleteJac(@PathVariable("id")long id){
        this.service.borrarJac(id);
+    }
+    */
+
+    @DeleteMapping("/Jacs/{id}")
+    public RedirectView eliminarJac(@PathVariable(value = "id") Long id){
+        this.service.borrarJac(id);
+        return new RedirectView("/Jacs");
     }
 
    /* @PutMapping("/listaJac/{id}")
@@ -46,8 +53,8 @@ public class JacController {
     }
 
     */
-    @PutMapping("/listaJac/{id}")
-       public RedirectView actualizarJac(@PathVariable Long id, Jac actJac) {
+    @PutMapping("/Jacs/{id}")
+       public RedirectView actualizarJac(@PathVariable("id") Long id, Jac actJac) {
         this.service.actualizarJac(id, actJac);
         return  new RedirectView("/Jacs");
 

@@ -12,13 +12,13 @@ public class Empleado {
     @Column(name = "NombreEmpleado")
     private String NombreEmpleado;
     @Column(name = "emailEmpleado")
-    private String emailEmpleado;
+    public String emailEmpleado;
 
     @ManyToOne(optional = true)
     @JoinColumn(name = "nitJac")
     private  Jac juntaAccionComunalPertenece;
     @Column(name = "RolJuntaAccionComuna")
-    private String RolJuntaAccionComuna;
+    public String RolJuntaAccionComuna;
 
     public Empleado(){
 
@@ -48,7 +48,7 @@ public class Empleado {
         this.juntaAccionComunalPertenece = juntaAccionComunalPertenece;
     }
 
-    public String getRolJuntaAccionComunal() {
+    public String getRolJuntaAccionComuna() {
         return RolJuntaAccionComuna;
     }
 

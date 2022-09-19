@@ -41,6 +41,7 @@ public class JacService {
 
     public Jac actualizarJac(Long id, Jac j){
         Jac jacActual = repository.findById(id).orElseThrow();
+        jacActual.setNitJac(j.getNitJac());
         jacActual.setNombreJac(j.getNombreJac());
         jacActual.setDireccionJac(j.getDireccionJac());
         jacActual.setTelefonoJac(j.getTelefonoJac());
