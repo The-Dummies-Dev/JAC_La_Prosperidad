@@ -15,10 +15,22 @@
         <h1 class="display-5 fw-bold mb-5">Actualizar Junta</h1>
         <div th:each="jacFind : ${jacFind}" class="col-lg-5 mx-auto">
             <form th:action="@{/Jacs/{id} (id=${jacFind.nitJac})}" th:method="put" class="d-flex flex-column gap-3 align-items-center">
+                <div class="input-group mb-2 ">
+                    <span class="input-group-text bg-dark text-white">Nombre:</span>
                 <input th:field="*{jacFind.nombreJac}" class="form-control bg-dark text-white" type="text" placeholder="Nombre de la junta"/>
+                </div>
+                <div class="input-group mb-2 ">
+                    <span class="input-group-text bg-dark text-white">Dirección:</span>
                 <input th:field="*{jacFind.direccionJac}" class="form-control bg-dark text-white" type="text" placeholder="Dirección de la junta"/>
+                </div>
+                <div class="input-group mb-2 ">
+                    <span class="input-group-text bg-dark text-white">Telefono:</span>
                 <input th:field="*{jacFind.telefonoJac}" class="form-control bg-dark text-white" type="text" placeholder="Telefono de la junta"/>
+                </div>
+                <div class="input-group mb-2 ">
+                    <span class="input-group-text bg-dark text-white">Nit:</span>
                 <input th:field="*{jacFind.nitJac}" class="form-control bg-dark text-white" type="number" placeholder="Nit de la junta"/>
+                </div>
                 <button class="btn btn-primary  px-4 gap-3"  type="submit">Actualizar Junta</button>
                 <a href="/Jacs" class="btn btn-outline-secondary px-4 gap-3"  type="submit">Cancelar</a>
             </form>

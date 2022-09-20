@@ -11,7 +11,7 @@
 </head>
 <body class="bg-dark text-white">
 <main>
-    <div class="px-4 py-5 my-4 text-center ">
+    <div class="px-4 py-3 my-4 text-center ">
         <h1 class="display-5 fw-bold mb-2">Juntas de acción comunal registradas</h1>
         <div class="d-flex gap-4 justify-content-center">
             <div th:each="jac:${juntas}" class="card bg-dark text-white" style="width: 18rem;">
@@ -33,11 +33,13 @@
             </div>
         </div>
     </div>
-        <div class="px-4 py-5 my-5 text-center">
-            <a href="/Jacs/nuevajac" type="button" class="btn btn-primary btn-lg px-5 gap-3">Crear Junta</a>
-            <a href="/Empleados" type="button" class="btn btn-primary btn-lg px-5 gap-3">Ir a Empleados</a>
-            <a href="/MovimientoDinero" type="button" class="btn btn-primary btn-lg px-5 gap-3">Ir a Movimentos Dinero</a>
-            <a href="/" type="button" class="btn btn-outline-secondary btn-lg px-5 gap-3">Ir al Inicio</a>
+        <div class="px-4 py-1 my-4 text-center">
+            <a href="/Jacs/nuevajac" type="button" class="btn btn-primary btn-lg px-3 gap-3">Crear Junta</a>
+            <a href="/Empleados" type="button" class="btn btn-primary btn-lg px-3 gap-3">Ir a Empleados</a>
+        </div>
+        <div class="px-4 py-0 my-3 text-center">
+            <a href="/MovimientoDinero" type="button" class="btn btn-primary btn-lg px-3 gap-1">Ir a Movimentos Dinero</a>
+            <a href="/" type="button" class="btn btn-outline-secondary btn-lg px-3 gap-1">Ir al Inicio</a>
         </div>
     </div>
 </main>

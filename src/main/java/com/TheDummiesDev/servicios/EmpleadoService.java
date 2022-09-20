@@ -31,6 +31,16 @@ public class EmpleadoService {
         this.repositorioEmp.deleteById(id);
     }
 
+    public Empleado actualizarEmpleado(Long id, Empleado e){
+        Empleado empleadoActual=repositorioEmp.findById(id).orElseThrow();
+        empleadoActual.setIdCedula(e.getIdCedula());
+        empleadoActual.setNombreEmpleado(e.getNombreEmpleado());
+        empleadoActual.setemailEmpleado(e.getemailEmpleado());
+        empleadoActual.setRolJuntaAccionComuna(e.getRolJuntaAccionComuna());
+        empleadoActual.setjuntaAccionComunalPertenece(e.getJuntaAccionComunalPertenece());
+        return this.repositorioEmp.save(empleadoActual);
+    }
+
 }
 
 

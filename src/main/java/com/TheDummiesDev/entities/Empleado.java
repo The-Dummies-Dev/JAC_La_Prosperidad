@@ -18,7 +18,7 @@ public class Empleado {
     @JoinColumn(name = "nitJac")
     private  Jac juntaAccionComunalPertenece;
     @Column(name = "RolJuntaAccionComuna")
-    public String RolJuntaAccionComuna;
+    private String RolJuntaAccionComuna;
 
     public Empleado(){
 
@@ -29,7 +29,7 @@ public class Empleado {
         this.NombreEmpleado = NombreEmpleado;
         this.emailEmpleado = emailEmpleado;
         this.juntaAccionComunalPertenece = juntaAccionComunalPertenece;
-        this.RolJuntaAccionComuna = RolJuntaAccionComuna;
+        this.setRolJuntaAccionComuna(RolJuntaAccionComuna);
     }
 
     public String getNombreEmpleado() {
@@ -48,13 +48,7 @@ public class Empleado {
         this.juntaAccionComunalPertenece = juntaAccionComunalPertenece;
     }
 
-    public String getRolJuntaAccionComuna() {
-        return RolJuntaAccionComuna;
-    }
 
-    public void SetRolJuntaAccionComuna(String RolJuntaAccionComuna) {
-        this.RolJuntaAccionComuna = RolJuntaAccionComuna;
-    }
 
     public String getemailEmpleado() {
         return emailEmpleado;
@@ -71,5 +65,13 @@ public class Empleado {
 
     public void setIdCedula(long idCedula) {
         this.idCedula = idCedula;
+    }
+
+    public String getRolJuntaAccionComuna() {
+        return RolJuntaAccionComuna;
+    }
+
+    public void setRolJuntaAccionComuna(String rolJuntaAccionComuna) {
+        RolJuntaAccionComuna = rolJuntaAccionComuna;
     }
 }

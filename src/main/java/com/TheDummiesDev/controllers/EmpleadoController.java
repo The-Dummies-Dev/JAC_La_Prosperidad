@@ -37,9 +37,23 @@ public class EmpleadoController {
     public Empleado getEmpleado( @PathVariable("id") long id){
         return this.em1.getEmpleado(id);
     }
+    /*
     @DeleteMapping("/listaEmpleado/{id}")
     public void deleteEmpleado(@PathVariable("id")long id){
         this.em1.borrarEmpleado(id);
+    }
+     */
+
+    @PutMapping("/Empleados/{id}")
+    public RedirectView actualizarEmpleado(@PathVariable("id") Long id, Empleado actEmpleado){
+     this.em1.actualizarEmpleado(id, actEmpleado);
+     return new RedirectView("/Empleados");
+    }
+
+    @DeleteMapping("/Empleados/{id}")
+    public RedirectView borrarEmpleado(@PathVariable("id") Long id){
+        this.em1.borrarEmpleado(id);
+        return new RedirectView("/Empleados");
     }
 
 

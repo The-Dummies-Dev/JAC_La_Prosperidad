@@ -20,7 +20,7 @@
                     <h5 class="card-title" th:text="${empleado.NombreEmpleado}"></h5>
                     <strong>Documento identidad<p class="card-text" th:text="${empleado.idCedula}"></p></strong>
                     <strong>Email<p class="card-text" th:text="${empleado.emailEmpleado}"></p></strong>
-                    <strong>Email<p class="card-text" th:text="${empleado.RolJuntaAccionComuna}"></p></strong>
+                    <strong>Cargo<p class="card-text" th:text="${empleado.RolJuntaAccionComuna}"></p></strong>
                     <strong>Jac a que pertenece<p class="card-text" th:text="${empleado.juntaAccionComunalPertenece.nombreJac}"></p></strong>
                     <div class="d-flex gap-1 justify-content-center">
                         <form th:action="@{/Empleados/{id}(id=${empleado.idCedula})}" th:method="get">

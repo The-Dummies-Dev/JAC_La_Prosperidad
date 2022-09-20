@@ -16,11 +16,12 @@
         <div class="col-lg-5 mx-auto">
             <form th:action="@{/listaEmpleado}" th:method="post" th:object="${nuevoEmpleado}" class="d-flex flex-column gap-3 align-items-center">
                 <input th:field="*{NombreEmpleado}" class="form-control bg-dark text-white" type="text" placeholder="Nombre del empleado"/>
+                <input th:field="*{idCedula}" class="form-control bg-dark text-white" type="text" placeholder="Cedula del empleado"/>
                 <input th:field="*{emailEmpleado}" class="form-control bg-dark text-white" type="text" placeholder="Email del empleado"/>
                 <input th:field="*{juntaAccionComunalPertenece.nitJac}" class="form-control bg-dark text-white" type="number" placeholder="Nit de junta pertenece"/>
                 <input th:field="*{RolJuntaAccionComuna}" class="form-control bg-dark text-white" type="text" placeholder="Cargo o rol dentro de la junta"/>
-                <button type="submit" class="btn btn-primary gap-5" >Crear Junta</button>
-                <a href="/Jacs" class="btn btn-outline-secondary gap-5" >Cancelar</a>
+                <button type="submit" class="btn btn-primary gap-5" >Crear Empleado</button>
+                <a href="/Empleados" class="btn btn-outline-secondary gap-5" >Cancelar</a>
             </form>
         </div>
     </div>
