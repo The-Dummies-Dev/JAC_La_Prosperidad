@@ -47,12 +47,7 @@ public class JacController {
         return new RedirectView("/Jacs");
     }
 
-   /* @PutMapping("/listaJac/{id}")
-    public Jac update(@PathVariable("id")long id, @RequestBody Jac actulizarJac){
-        return this.service.actualizarJac(id,actulizarJac);
-    }
 
-    */
     @PutMapping("/Jacs/{id}")
        public RedirectView actualizarJac(@PathVariable("id") Long id, Jac actJac) {
         this.service.actualizarJac(id, actJac);

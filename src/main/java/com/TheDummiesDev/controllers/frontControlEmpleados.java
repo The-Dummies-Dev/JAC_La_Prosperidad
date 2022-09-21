@@ -1,7 +1,6 @@
 package com.TheDummiesDev.controllers;
 
 import com.TheDummiesDev.entities.Empleado;
-import com.TheDummiesDev.entities.Jac;
 import com.TheDummiesDev.servicios.EmpleadoService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
