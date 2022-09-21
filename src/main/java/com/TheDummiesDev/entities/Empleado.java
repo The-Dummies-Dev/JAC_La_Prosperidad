@@ -8,7 +8,7 @@ import javax.persistence.*;
     @Table(name = "empleado")
 public class Empleado {
     @Id
-    private long idCedula;
+    private Long idCedula;
     @Column(name = "NombreEmpleado")
     private String NombreEmpleado;
     @Column(name = "emailEmpleado")
@@ -24,7 +24,7 @@ public class Empleado {
 
     }
 
-    public Empleado(long idCedula, String NombreEmpleado, String emailEmpleado, Jac juntaAccionComunalPertenece, String RolJuntaAccionComuna) {
+    public Empleado(Long idCedula, String NombreEmpleado, String emailEmpleado, Jac juntaAccionComunalPertenece, String RolJuntaAccionComuna) {
         this.idCedula = idCedula;
         this.NombreEmpleado = NombreEmpleado;
         this.emailEmpleado = emailEmpleado;
@@ -59,11 +59,11 @@ public class Empleado {
     }
 
 
-    public long getIdCedula() {
+    public Long getIdCedula() {
         return idCedula;
     }
 
-    public void setIdCedula(long idCedula) {
+    public void setIdCedula(Long idCedula) {
         this.idCedula = idCedula;
     }
 

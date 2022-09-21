@@ -15,7 +15,7 @@
         <h1 class="display-5 fw-bold mb-2">Empleados registrados</h1>
         <div class="d-flex gap-4 justify-content-center">
             <div th:each="empleado:${empleados}" class="card bg-dark text-white" style="width: 18rem;">
-                <img src="img/jac_icon.png" class="card-img-top" alt="logo juntas" style="width: 100px">
+                <img src="img/employees.png" class="card-img-top" alt="logo juntas" style="width: 100px">
                 <div class="card-body bg-dark text-white ">
                     <h5 class="card-title" th:text="${empleado.NombreEmpleado}"></h5>
                     <strong>Documento identidad<p class="card-text" th:text="${empleado.idCedula}"></p></strong>

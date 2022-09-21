@@ -32,4 +32,13 @@ public class movimientoDineroService {
         this.repositoryMov.deleteById(id);
     }
 
+    public movimientoDinero actualizarMovimentoD(Long id, movimientoDinero m){
+        movimientoDinero movimientoDactual = repositoryMov.findById(id).orElseThrow();
+        movimientoDactual.setIdRegistroMoviminetoDinero(m.getIdRegistroMoviminetoDinero());
+        movimientoDactual.setConceptoMovimiento(m.getConceptoMovimiento());
+        movimientoDactual.setMontoMovimiento(m.getMontoMovimiento());
+        movimientoDactual.setUsuarioRegistraMovimiento(m.getUsuarioRegistraMovimiento());
+        return this.repositoryMov.save(movimientoDactual);
+    }
+
 }

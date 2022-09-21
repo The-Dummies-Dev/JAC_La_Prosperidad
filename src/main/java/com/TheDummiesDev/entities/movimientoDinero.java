@@ -11,7 +11,7 @@ public class movimientoDinero {
     @Id
     private Long idRegistroMoviminetoDinero;
     @Column(name="montoMovimiento")
-    private float montoMovimiento;
+    private Float montoMovimiento;
     @Column(name="conceptoMovimiento")
     private String conceptoMovimiento;
     @ManyToOne(optional = true)
@@ -24,18 +24,18 @@ public class movimientoDinero {
     public movimientoDinero() {
     }
 
-    public movimientoDinero(Long idRegistroMoviminetoDinero, float montoMovimiento, String conceptoMovimiento, Empleado usuarioRegistraMovimiento) {
+    public movimientoDinero(Long idRegistroMoviminetoDinero, Float montoMovimiento, String conceptoMovimiento, Empleado usuarioRegistraMovimiento) {
         this.idRegistroMoviminetoDinero=idRegistroMoviminetoDinero;
         this.montoMovimiento = montoMovimiento;
         this.conceptoMovimiento = conceptoMovimiento;
         this.usuarioRegistraMovimiento = usuarioRegistraMovimiento;
     }
 
-    public float getMontoMovimiento() {
+    public Float getMontoMovimiento() {
         return montoMovimiento;
     }
 
-    public void setMontoMovimiento(float montoMovimiento) {
+    public void setMontoMovimiento(Float montoMovimiento) {
         this.montoMovimiento = montoMovimiento;
     }
 
