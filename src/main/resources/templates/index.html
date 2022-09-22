@@ -11,6 +11,12 @@
 </head>
 <body class="bg-dark text-white">
 <main>
+    <div class="row align-items-center" >
+        <div sec:authorize="isAuthenticated()">
+            <h6 th:text="'Bienvenido/a, ' + ${usuario.getEmail()}" align="right"></h6>
+        </div>
+    </div>
+
 <div class="container text-center">
     <div class="row">
         <div class="col py-3 my-4 ">
