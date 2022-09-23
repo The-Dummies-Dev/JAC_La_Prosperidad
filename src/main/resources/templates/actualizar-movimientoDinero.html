@@ -17,7 +17,7 @@
             <form th:action="@{/MovimientoDinero/{id} (id=${movimientoDFind.idRegistroMoviminetoDinero})}" th:method="put" class="d-flex flex-column gap-3 align-items-center">
                 <div class="input-group mb-2 ">
                     <span class="input-group-text bg-dark text-white"># resgistro movimiento:</span>
-                    <input th:field="*{movimientoDFind.idRegistroMoviminetoDinero}" class="form-control bg-dark text-white" type="text" placeholder=""/>
+                    <input th:field="*{movimientoDFind.idRegistroMoviminetoDinero}" class="form-control bg-dark text-white" type="text" placeholder="" disabled="true"/>
                 </div>
                 <div class="input-group mb-2 ">
                     <span class="input-group-text bg-dark text-white">Monto:</span>
