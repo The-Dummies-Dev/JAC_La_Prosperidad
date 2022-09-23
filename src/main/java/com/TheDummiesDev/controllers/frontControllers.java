@@ -25,6 +25,11 @@ public class frontControllers {
         this.serviceUs = serviceUs;
     }
 
+    @GetMapping("/Acerca")
+    public String acerca(){
+        return "/Acerca";
+    }
+
     @GetMapping("/")
     public String index(Model model, @AuthenticationPrincipal OidcUser principal) {
         if(principal != null){
@@ -36,10 +41,6 @@ public class frontControllers {
         return "index";
     }
 
-//    @GetMapping("/")
-//    public String index() {
-//        return "index";
-//    }
 
     @GetMapping("/Jacs")
     public String Jacs(Model modelo){
