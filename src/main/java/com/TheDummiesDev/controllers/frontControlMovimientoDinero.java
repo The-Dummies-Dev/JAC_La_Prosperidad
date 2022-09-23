@@ -21,7 +21,7 @@ public class frontControlMovimientoDinero {
     public String movimentoDinero(Model modelMov) {
         List<movimientoDinero> listaMov = this.movimientoService.getListaMovimientoDinero();
         modelMov.addAttribute("movimientoD", listaMov);
-        return ("/MovimientoDinero");
+        return ("MovimientoDinero");
     }
     @GetMapping("/MovimientoDinero/nuevomovimientoDinero")
     public String nuevoMovimientoD(Model model){

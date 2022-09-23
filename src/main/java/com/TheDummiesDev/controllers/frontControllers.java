@@ -27,7 +27,7 @@ public class frontControllers {
 
     @GetMapping("/Acerca")
     public String acerca(){
-        return "/Acerca";
+        return "Acerca";
     }
 
     @GetMapping("/")

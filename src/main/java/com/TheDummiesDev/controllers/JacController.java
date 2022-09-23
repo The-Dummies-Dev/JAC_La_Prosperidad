@@ -17,12 +17,7 @@ public class JacController {
 
         this.service= service;
     }
-   /* @GetMapping("/listaJac")
-    public List<Jac> listaJac() {
 
-        return this.service.getListaJac();
-    }
-    */
     @PostMapping("/listaJac")
     public RedirectView createJac(@ModelAttribute Jac jac, Model model){
         model.addAttribute(jac);
@@ -35,14 +30,10 @@ public class JacController {
         return this.service.getJac(id);
     }
 
-   /* @DeleteMapping("/listaJac/{id}")
-    public void deleteJac(@PathVariable("id")long id){
-       this.service.borrarJac(id);
-    }
-    */
+
 
     @DeleteMapping("/Jacs/{id}")
-    public RedirectView eliminarJac(@PathVariable(value = "id") Long id){
+    public RedirectView eliminarJac(@PathVariable("id") Long id){
         this.service.borrarJac(id);
         return new RedirectView("/Jacs");
     }
