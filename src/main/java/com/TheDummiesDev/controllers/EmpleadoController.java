@@ -27,7 +27,7 @@ public class EmpleadoController {
         return this.em1.createEmpleado(emp);
     }
     */
-   @PostMapping("/listaEmpleado")
+   @PostMapping("/Empleados")
    public RedirectView createEmpleado(@ModelAttribute Empleado empleado, Model model){
        model.addAttribute(empleado);
        this.em1.createEmpleado(empleado);
