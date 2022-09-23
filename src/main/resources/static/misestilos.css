@@ -1,0 +1,44 @@
+.pushable {
+  background: rgba(8, 36, 196, 0.877);
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+.front {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 1.20rem;
+  background: rgb(23, 74, 243);
+  color: white;
+  transform: translateY(-6px);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+}
+.pushable-secondary {
+  background: rgba(82, 83, 85, 0.877);
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+.front-secondary {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 1.20rem;
+  background: rgb(123, 124, 126);
+  color: white;
+  transform: translateY(-6px);
+}
+
+.pushable-secondary:active .front-secondary {
+  transform: translateY(-2px);
+}
+
+

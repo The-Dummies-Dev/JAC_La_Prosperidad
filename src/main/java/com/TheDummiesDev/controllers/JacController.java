@@ -2,7 +2,10 @@ package com.TheDummiesDev.controllers;
 
 import com.TheDummiesDev.entities.Jac;
 import com.TheDummiesDev.servicios.JacService;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.view.RedirectView;
+
 
 import java.util.List;
 
@@ -14,14 +17,17 @@ public class JacController {
 
         this.service= service;
     }
-    @GetMapping("/listaJac")
+   /* @GetMapping("/listaJac")
     public List<Jac> listaJac() {
 
         return this.service.getListaJac();
     }
+    */
     @PostMapping("/listaJac")
-    public Jac createJac(@RequestBody Jac jac){
-     return this.service.createJac(jac);
+    public RedirectView createJac(@ModelAttribute Jac jac, Model model){
+        model.addAttribute(jac);
+        this.service.createJac(jac);
+        return new RedirectView("/Jacs");
     }
 
     @GetMapping("/listaJac/{id}")
@@ -29,10 +35,23 @@ public class JacController {
         return this.service.getJac(id);
     }
 
-    @DeleteMapping("/listaJac/{id}")
+   /* @DeleteMapping("/listaJac/{id}")
     public void deleteJac(@PathVariable("id")long id){
        this.service.borrarJac(id);
     }
+    */
+
+    @DeleteMapping("/Jacs/{id}")
+    public RedirectView eliminarJac(@PathVariable(value = "id") Long id){
+        this.service.borrarJac(id);
+        return new RedirectView("/Jacs");
+    }
 
 
+    @PutMapping("/Jacs/{id}")
+       public RedirectView actualizarJac(@PathVariable("id") Long id, Jac actJac) {
+        this.service.actualizarJac(id, actJac);
+        return  new RedirectView("/Jacs");
+
+    }
 }

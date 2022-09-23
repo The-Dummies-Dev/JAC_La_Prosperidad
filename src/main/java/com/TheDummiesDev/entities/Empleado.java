@@ -8,11 +8,11 @@ import javax.persistence.*;
     @Table(name = "empleado")
 public class Empleado {
     @Id
-    private long idCedula;
+    private Long idCedula;
     @Column(name = "NombreEmpleado")
     private String NombreEmpleado;
     @Column(name = "emailEmpleado")
-    private String emailEmpleado;
+    public String emailEmpleado;
 
     @ManyToOne(optional = true)
     @JoinColumn(name = "nitJac")
@@ -24,12 +24,12 @@ public class Empleado {
 
     }
 
-    public Empleado(long idCedula, String NombreEmpleado, String emailEmpleado, Jac juntaAccionComunalPertenece, String RolJuntaAccionComuna) {
+    public Empleado(Long idCedula, String NombreEmpleado, String emailEmpleado, Jac juntaAccionComunalPertenece, String RolJuntaAccionComuna) {
         this.idCedula = idCedula;
         this.NombreEmpleado = NombreEmpleado;
         this.emailEmpleado = emailEmpleado;
         this.juntaAccionComunalPertenece = juntaAccionComunalPertenece;
-        this.RolJuntaAccionComuna = RolJuntaAccionComuna;
+        this.setRolJuntaAccionComuna(RolJuntaAccionComuna);
     }
 
     public String getNombreEmpleado() {
@@ -48,13 +48,7 @@ public class Empleado {
         this.juntaAccionComunalPertenece = juntaAccionComunalPertenece;
     }
 
-    public String getRolJuntaAccionComunal() {
-        return RolJuntaAccionComuna;
-    }
 
-    public void SetRolJuntaAccionComuna(String RolJuntaAccionComuna) {
-        this.RolJuntaAccionComuna = RolJuntaAccionComuna;
-    }
 
     public String getemailEmpleado() {
         return emailEmpleado;
@@ -65,11 +59,19 @@ public class Empleado {
     }
 
 
-    public long getIdCedula() {
+    public Long getIdCedula() {
         return idCedula;
     }
 
-    public void setIdCedula(long idCedula) {
+    public void setIdCedula(Long idCedula) {
         this.idCedula = idCedula;
+    }
+
+    public String getRolJuntaAccionComuna() {
+        return RolJuntaAccionComuna;
+    }
+
+    public void setRolJuntaAccionComuna(String rolJuntaAccionComuna) {
+        RolJuntaAccionComuna = rolJuntaAccionComuna;
     }
 }
